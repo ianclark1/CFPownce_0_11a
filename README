@@ -1,0 +1,57 @@
+Copyright 2007 Kyle D. Hayes
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+========================================================================
+
+Contact Kyle Hayes
+
+Web: http://kylehayes.info/blog/
+Email: mrkylehayes@gmail.com
+Pownce: kylehayes
+Gtalk/Yahoo/AIM: mrkylehayes
+
+========================================================================
+
+Version 0.11a
+Release Date: July 20, 2007
+
+- Fixed some minor bugs that were causing the component to malfunction.
+
+
+Version 0.1a Build 1
+Release Date: July 19, 2007
+
+This CFPownce CFC is far from being completed. Currently the only feature
+it supports from the Unofficial Pownce API is getting your notes. The CFC
+is very easy to use.
+
+Instructions for use:
+	1) Drop the cfpownce.cfc in your webroot or other commone area that you
+	   store your CFCs for your project
+	2) Init the component using the following syntax:
+	
+	   <cfset pownce = createObject("component","your.path.to.cfpownce").
+	   init("yourPownceUsername","yourPowncePassword") />
+	
+	3) Once you have CFPownce instantiated, you can call the getNotes()
+	   function like so:
+	   
+	   <cfset myNotes = pownce.getNotes() />
+	   
+	NOTE: The Notes are currently returned in XML
+	
+Being that this is the first release of CFPownce and a very quick release,
+proper error handling and throwing has not been implemented yet. Meaning,
+if the service is unavailble for some reason, or something else goes wrong
+you will simply get a ColdFusion error on the screen for no apparent reason.
